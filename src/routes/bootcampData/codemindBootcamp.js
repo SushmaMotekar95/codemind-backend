@@ -252,7 +252,9 @@ router.put('/:id', async (req, res) => {
       return res.status(404).send({ error: 'Bootcamp entry not found' });
     }
 
+    delete req.body.id;
     await docRef.update(req.body);
+    
     logger.info(`Successfully updated Bootcamp data with ID: ${bootcampId} in "codemindBootcamp" collection`);
     res.status(200).send({ id: bootcampId, ...req.body });
   } catch (error) {

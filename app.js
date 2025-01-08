@@ -1,4 +1,4 @@
-//codemind websites
+//codemind websites (partiksha)
 /*const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
@@ -94,59 +94,64 @@ const { db } = require('./firebase.js')
 const morgan = require('morgan');
 
 //Login Data
-const authRoutes = require('./src1/routes/auth');
+const authRoutes = require('./src/routes/auth');
 
 //Dashboard Data
-const studentInformationRoutes = require('./src1/routes/studentInformation');
+const studentInformationRoutes = require('./src/routes/studentInformation');
 
 //Student-Leads Data
-const inquiryRoutes = require('./src1/routes/Inquiry');
-const notInterestedRoutes = require('./src1/routes/notInterested');
-const interestedRoutes = require('./src1/routes/interested');
-const followUpRoutes = require('./src1/routes/followUp');
-const totalRecordsRouter = require('./src1/routes/totalTableRecords');
+const inquiryRoutes = require('./src/routes/Inquiry');
+const notInterestedRoutes = require('./src/routes/notInterested');
+const interestedRoutes = require('./src/routes/interested');
+const followUpRoutes = require('./src/routes/followUp');
+const totalRecordsRouter = require('./src/routes/totalTableRecords');
 
 //Report Data
-const reportRoutes = require('./src1/routes/report');
-const usersReportRoutes = require('./src1/routes/usersReport');
-const studentsReportRoutes = require('./src1/routes/ReportGenerate/studentsreports');
+const reportRoutes = require('./src/routes/report');
+const usersReportRoutes = require('./src/routes/usersReport');
+const studentsReportRoutes = require('./src/routes/ReportGenerate/studentsreports');
 
 // const studentMockInformationRoutes = require('./routes/studentMockInformation');
 
 //Course and Fees Data
-const courseRoutes = require('./src1/routes/course');
-const feesRoutes = require('./src1/routes/fees');
+const courseRoutes = require('./src/routes/course');
+const feesRoutes = require('./src/routes/fees');
 
 
 //Bootcamp Data
-const bootcampRoutes = require('./src1/routes/bootcampData/bootcamp');
-const bootcampInterestedRoutes = require('./src1/routes/bootcampData/interested');
-const bootcampNotInterestedRoutes = require('./src1/routes/bootcampData/notInterested');
-const bootcampFollowUpRoutes = require('./src1/routes/bootcampData/followUp');
-const bootcampTotalRecordsRouter = require('./src1/routes/bootcampData/totalTableRecords');
-const codemindBootcampRoutes =require('./src1/routes/bootcampData/codemindBootcamp');
+const bootcampRoutes = require('./src/routes/bootcampData/bootcamp');
+const bootcampInterestedRoutes = require('./src/routes/bootcampData/interested');
+const bootcampNotInterestedRoutes = require('./src/routes/bootcampData/notInterested');
+const bootcampFollowUpRoutes = require('./src/routes/bootcampData/followUp');
+const bootcampTotalRecordsRouter = require('./src/routes/bootcampData/totalTableRecords');
+const codemindBootcampRoutes =require('./src/routes/bootcampData/codemindBootcamp');
 
 //HirUs Data 
-const HireUsRoutes = require('./src1/routes/hireFromUsData/newLeads');
-const HireUsInterestedRoutes = require('./src1/routes/hireFromUsData/interested');
-const HireUsNotInterestedRoutes = require('./src1/routes/hireFromUsData/notInterested');
-const HireUsFollowUpRoutes = require('./src1/routes/hireFromUsData/followUps');
-const HireUsTotalRecordsRouter = require('./src1/routes/hireFromUsData/totalRecords');
+const HireUsRoutes = require('./src/routes/hireFromUsData/newLeads');
+const HireUsInterestedRoutes = require('./src/routes/hireFromUsData/interested');
+const HireUsNotInterestedRoutes = require('./src/routes/hireFromUsData/notInterested');
+const HireUsFollowUpRoutes = require('./src/routes/hireFromUsData/followUps');
+const HireUsTotalRecordsRouter = require('./src/routes/hireFromUsData/totalRecords');
 
 //College Data
-const collegeInfoRoutes = require('./src1/routes/collegeData/collegeInfo');
+const collegeInfoRoutes = require('./src/routes/collegeData/collegeInfo');
 
 //Scholarship Data 
-const scholarshipRoutes = require('./src1/routes/scholarshipData/scholarship');
+const scholarshipRoutes = require('./src/routes/scholarshipData/scholarship');
 
 //Student Issue Data
-const studentIssueRoutes = require('./src1/routes/studentIssueData/studentIssue');
+const studentIssueRoutes = require('./src/routes/studentIssueData/studentIssue');
 
 //Inventory Data
-const inventoryRoutes = require('./src1/routes/inventoryData/inventory');
+const inventoryRoutes = require('./src/routes/inventoryData/inventory');
 
 //Intialize Express
 const app = express();
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+  return res.status(200).json({ status: 'UP', timestamp: new Date() });
+});
 
 // Log HTTP requests to Winston using morgan
 const stream = {
