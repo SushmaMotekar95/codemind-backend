@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 50px;
+        margin-top: 30px;
+    }
+
+    .header img {
+        position: absolute;
+        left: 0;
+        width: 150px;
+        height: 120px;
+        margin-top: 20px;
+    }
+    .header h1 {
+        margin: 0;
+        color: #1d4629;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+     .bottom-section {
+        text-align: right;
+        margin-top: 40px;
+        color: #3a3a3a;
+        font-size: 18px;
+    }
+    .bottom-section p {
+        margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+        <img src="https://www.codemindtechnology.com/assets/img/logo-shape.png" alt="Logo">
+        <h1>Students Report</h1>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Srno</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile_number</th>
+        <th>Batch</th>
+        <th>Course</th>
+      </tr>
+    </thead>
+    <tbody id="table-body">
+      <!-- User data will be inserted here -->
+    </tbody>
+  </table>
+  <div class="bottom-section">
+    <p>Best regards,<br>Codemind Technology, Pune</p>
+  </div>
+</body>
+</html>

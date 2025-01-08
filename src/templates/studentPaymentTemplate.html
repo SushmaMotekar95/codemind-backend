@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+
+        .header img {
+            position: absolute;
+            left: 0;
+            width: 150px;
+            height: 120px;
+            margin-top: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            color: #1d4629;
+        }
+        .details {
+            margin: 20px 0;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+        td {
+            text-align: left;
+        }
+        .bottom-section {
+            text-align: right;
+            margin-top: 40px;
+            color: #3a3a3a;
+            font-size: 18px;
+        }
+        .bottom-section p {
+            margin: 0;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <!-- <img src="{{codemindUrl}}" alt="Logo"> -->
+        <img src="https://www.codemindtechnology.com/assets/img/logo-shape.png" alt="Logo">
+        <h1>Payment Receipt</h1> 
+    </div>
+    <div class="details">
+        <p><strong>Name:</strong> {{fullName}}</p>
+        <p><strong>Batch:</strong> {{batch}}</p>
+        <!-- Payment Details in Table Format -->
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Details</th>
+            </tr>
+            <tr>
+                <td>Total Fees</td>
+                <td>{{totalFees}}</td>
+            </tr>
+            <tr>
+                <td>Total Paid Fees</td>
+                <td>{{totalPaidFees}}</td>
+            </tr>
+            <tr>
+                <td>Current Paid Fees</td>
+                <td>{{paidFees}}</td>
+            </tr>
+            <tr>
+                <td>Remaining Fees</td>
+                <td>{{remainingFees}}</td>
+            </tr>
+            <tr>
+                <td>Course</td>
+                <td>{{course}}</td>
+            </tr>
+           
+            <tr>
+                <td>Installment</td>
+                <td>{{installment}}</td>
+            </tr>
+            <tr>
+                <td>Payment Status</td>
+                <td>{{paymentStatus}}</td>
+            </tr>
+            <tr>
+                <td>Transaction ID</td>
+                <td>{{transactionId}}</td>
+            </tr>
+            <tr>
+                <td>Bank Name</td>
+                <td>{{bankName}}</td>
+            </tr>
+            <tr>
+                <td>Payment Date</td>
+                <td>{{paymentDate}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="bottom-section">
+        <p>Best regards,<br>Codemind Technology, Pune</p>
+    </div>
+    <footer>
+        <p>Generated on: {{generatedTime}}</p>
+    </footer>
+</body>
+</html>
